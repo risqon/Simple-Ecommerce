@@ -1,0 +1,9 @@
+.btn-add{
+    background-color: aqua;
+    font-size: 24px;
+    font-weight: 500;
+    border-radius: 6px;
+    border:aqua;
+    padding: 12px;
+    cursor: pointer;
+}
