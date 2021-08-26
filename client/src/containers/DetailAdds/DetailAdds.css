@@ -1,0 +1,39 @@
+.detail-container{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50%;
+    
+}
+
+.card-detail{
+    height: 600px;
+    width: 100%;
+
+
+}
+
+.img-card{
+    width:max-content;
+    border-width: 2px;
+    border-color:darkgray;
+    border-style: solid;
+    border-radius: 4px;
+}
+
+.img-item{
+    width: 90%;
+    margin: 20px;
+    height: 90%;
+}
+
+.card-img{
+    height: 100%;
+}
+
+.card-testi{
+    display: flex;
+    margin-top: 30%;
+    margin-left: 28%;
+}

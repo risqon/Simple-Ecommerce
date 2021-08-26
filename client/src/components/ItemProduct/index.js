@@ -2,13 +2,14 @@ import React from 'react';
 import './CardProduct.css'
 import StartRating from 'react-star-ratings'
 import Ip12 from '../../assets/images/ip12.jpg'
+import { Link } from 'react-router-dom'
 
 export default function ItemProduct(props) {
     return (
-        <div className="container">
-            <div className="card-product">
+        <div className="container-item">
+            <div className="product-card">
                 <div className="head-card">
-                    <img src={Ip12} alt="Product" />
+                    <img src={Ip12} style={{borderRadius: 10}} alt="Product" />
                 </div>
                 <div className="body-card">
                     <div className="title-product" >Product Tittle</div>
@@ -23,7 +24,7 @@ export default function ItemProduct(props) {
                     <div className="price-product" >Rp.3.990.000,-</div>
                 </div>
                 <div className="btn-product">
-                    <button className="btn-detail" >DETAIL ITEM</button>
+                    <Link to={"/detail"} className="btn-detail" >DETAIL ITEM</Link>
                 </div>
 
             </div>

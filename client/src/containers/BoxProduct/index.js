@@ -7,7 +7,7 @@ import './BoxProduct.css'
 class BoxProduct extends Component {
     render() {
         return (
-            <div className="container">
+            <div className="box">
               
                     <ItemProduct />
                     <ItemProduct />

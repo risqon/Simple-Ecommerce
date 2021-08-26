@@ -1,9 +1,13 @@
-.btn-add{
-    background-color: aqua;
-    font-size: 24px;
-    font-weight: 500;
-    border-radius: 6px;
-    border:aqua;
-    padding: 12px;
-    cursor: pointer;
+.container-card{
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    display: flex; 
+    margin-top: 50px;
+}
+
+.card{
+    width: 50%;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }

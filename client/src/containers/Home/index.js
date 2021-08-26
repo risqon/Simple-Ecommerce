@@ -9,12 +9,9 @@ class Home extends Component {
         return (
             <div >
                 <div className="card-home">
-                <Navbar />
-                    <div className="header">
-                        <AddForm />
-                    </div>
+                    <Navbar />
                     <div className="body">
-                        <BoxProduct/>
+                        <BoxProduct />
                     </div>
                 </div>
             </div>
