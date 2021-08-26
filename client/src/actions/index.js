@@ -8,8 +8,8 @@ export const loadAddsFailure = () => ({
     type: 'LOAD_ADDS_FAILURE'
 })
 
-export const loadAdds = (page, limit) => ({
-    type: 'LOAD_ADDS', page, limit
+export const loadAdds = () => ({
+    type: 'LOAD_ADDS'
 })
 
 export const resetAdds = () => ({
@@ -39,8 +39,8 @@ export const loadDetailAddsSuccess = (data) => ({
     data
 })
 
-export const resetDetailAdds = () =>({
-    type:'RESET_DETAIL_ADDS'
+export const resetDetailAdds = () => ({
+    type: 'RESET_DETAIL_ADDS'
 })
 //end load detail adds
 
@@ -55,7 +55,7 @@ export const upvote = () => ({
 export const devote = () => ({
     type: 'DEVOTE_ADDS',
 })
-export const updateVote = (id,vote,history) => ({
+export const updateVote = (id, vote, history) => ({
     type: 'UPDATE_VOTE',
     id,
     vote,

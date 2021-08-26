@@ -1,7 +1,6 @@
 import React from 'react';
 import './CardProduct.css'
 import StartRating from 'react-star-ratings'
-import Ip12 from '../../assets/images/ip12.jpg'
 import { Link } from 'react-router-dom'
 
 export default function ItemProduct(props) {
@@ -9,10 +8,10 @@ export default function ItemProduct(props) {
         <div className="container-item">
             <div className="product-card">
                 <div className="head-card">
-                    <img src={Ip12} style={{borderRadius: 10}} alt="Product" />
+                    <img src={props.image} style={{borderRadius: 10}} alt={props.title} />
                 </div>
                 <div className="body-card">
-                    <div className="title-product" >Product Tittle</div>
+                    <div className="title-product" >{props.title}</div>
                     <StartRating
                         rating={props.rate}
                         starRatedColor="gold"
@@ -20,8 +19,8 @@ export default function ItemProduct(props) {
                         name='rating'
                         starDimension="20px"
                     />
-                    <p className="desc-product" >Lorem Ipsum is simply dummy text of the pringting and typesetting industru.</p>
-                    <div className="price-product" >Rp.3.990.000,-</div>
+                    <p className="desc-product" >{props.desc}.</p>
+                    <div className="price-product" >{props.price}</div>
                 </div>
                 <div className="btn-product">
                     <Link to={"/detail"} className="btn-detail" >DETAIL ITEM</Link>

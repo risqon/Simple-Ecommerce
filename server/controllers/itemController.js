@@ -4,7 +4,7 @@ module.exports = {
     getItem : async ( req, res ) => {
         try {
             let items = await Item.find();
-            items = items.slice(0, 8 *req.query.page)
+            items = items.slice(0, 8 *req.query.page )
             res.status(200).json(items);
         } catch (err) {
             res.status(500).json({

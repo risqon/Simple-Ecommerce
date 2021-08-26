@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom'
+import { postAdds } from '../../actions';
 import Navbar from '../../components/Navbar';
 import './AddForm.css'
 
@@ -7,9 +9,29 @@ class AddForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            title: "",
+            rate: "",
+            description: "",
+            price: "",
+            brand: "",
+            detailProduct: "",
+            image: ""
         }
     }
 
+
+    handleChange = (e) => {
+        if (e.target.name === "image") {
+            this.setState({ [e.target.name]: e.target.value })
+        } else {
+            this.setState({ [e.target.name]: e.target.value })
+        }
+    }
+
+    handleSubmit = (e) => {
+        e.preventDefault();
+        this.props.postAdds(this.state.newData, this.props.history)
+    }
 
 
 
@@ -134,4 +156,11 @@ class AddForm extends Component {
     }
 }
 
-export default AddForm;
+const mapDispatchToProps = (dispatch) => ({
+    postAdds: (newData, history) => dispatch(postAdds(newData, history))
+})
+
+export default connect(
+    null,
+    mapDispatchToProps
+) (AddForm);

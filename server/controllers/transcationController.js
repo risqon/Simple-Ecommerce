@@ -1,4 +1,4 @@
-const Transaction = require("../models/Transaction");
+const Transaction = require("../models/Transaction.js");
 var path = require("path");
 
 module.exports = {

@@ -3,7 +3,7 @@ import * as actions from '../actions';
 import axios from 'axios'
 import Swal from 'sweetalert2'
 
-const API_URL = 'http://localhost:3001/api/'
+const API_URL = 'http://localhost:3001'
 
 const request = axios.create({
     baseURL: API_URL,
@@ -41,15 +41,13 @@ const update = async (path, params) =>
 
 
 
-const PATH = 'adds';
+const PATH = '/product/item';
 
 // load
 
-function* loadAdds(payload) {
-    const { limit, page } = payload
-    const QUERY_PATH = `${PATH}?limit=${limit}&page=${page}`
+function* loadAdds() {
     try {
-        const data = yield call(read, QUERY_PATH)
+        const data = yield call(read, PATH)
         yield put(actions.loadAddsSuccess(data));
     } catch (error) {
         console.log(error);

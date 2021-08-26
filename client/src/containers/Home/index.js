@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Navbar from '../../components/Navbar';
-import AddForm from '../AddForm';
 import BoxProduct from '../BoxProduct';
 import './Home.css'
 
