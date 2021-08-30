@@ -22,7 +22,7 @@ class AddForm extends Component {
 
     handleChange = (e) => {
         if (e.target.name === "image") {
-            this.setState({ [e.target.name]: e.target.value })
+            this.setState({ [e.target.name]: e.target.files[0] })
         } else {
             this.setState({ [e.target.name]: e.target.value })
         }
@@ -30,7 +30,7 @@ class AddForm extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        this.props.postAdds(this.state.newData, this.props.history)
+        this.props.postAdds(this.state, this.props.history)
     }
 
 

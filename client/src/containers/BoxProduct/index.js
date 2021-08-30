@@ -25,7 +25,7 @@ class BoxProduct extends Component {
             brand={item.brand}
             detailProduct={item.detailProduct}
             image={item.image}
-            rete={item.rate}/>
+            rate={item.rate}/>
         })
 
         return (

@@ -41,7 +41,7 @@ const update = async (path, params) =>
 
 
 
-const PATH = '/product/item';
+const PATH = '/api/product';
 
 // load
 

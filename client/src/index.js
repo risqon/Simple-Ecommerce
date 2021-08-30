@@ -27,7 +27,7 @@ ReactDOM.render(
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/add" component={AddForm} />
-          <Route path="/detail" component={DetailAdds} />
+          <Route path="/detail/:id" component={DetailAdds} />
         </Switch>
       </Router>
     </Provider>

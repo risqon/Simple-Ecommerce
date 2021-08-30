@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Navbar from '../../components/Navbar';
-import Ip12 from '../../assets/images/ip12.jpg'
 import './DetailAdds.css'
 import { connect } from 'react-redux';
 import { loadDetailAdds } from '../../actions';
@@ -15,9 +14,10 @@ class DetailAdds extends Component {
 
     componentDidMount(){
         const detailId = Number(this.props.match.params.id)
-        console.log(detailId)
+        console.log('detail',detailId)
         this.props.loadDetailAdds(detailId)
     }
+
 
     changeTab = (e) => {
         e.preventDefault()
@@ -30,7 +30,7 @@ class DetailAdds extends Component {
 
     render() {
 
-        const { isDetailTabActive, title, brand, price } = this.state
+        const { isDetailTabActive, title, brand, price, image } = this.state
 
         return (
             <div>
@@ -39,12 +39,13 @@ class DetailAdds extends Component {
                     <div className="card-detail">
                         <div className="row no-gutters">
                             <div className="col-md-5 img-card">
-                                <img src={Ip12} className="img-item" alt={title} />
+                                <img src={image} className="img-item" alt={title} />
                             </div>
 
                             <div className="col-md-6 offset-md-1">
                                 <div className="card-body">
-                                    <h1 className="card-title">{title}</h1>
+                                    <h1 className="card-title"> Title 
+                                    {title}</h1>
                                     <h4>{brand}</h4>
                                     <p className="card-text"><small className="text-muted">PRICE</small></p>
                                     <h2 style={{ marginTop: "-15px" }}>{price}</h2>
@@ -81,7 +82,7 @@ class DetailAdds extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    data: state.data
+    data: state.detailAdds
 })
 
 const mapDispatchToProps = (dispatch) => ({

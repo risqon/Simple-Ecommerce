@@ -2,6 +2,7 @@ import React from 'react';
 import './CardProduct.css'
 import StartRating from 'react-star-ratings'
 import { Link } from 'react-router-dom'
+import numToRupiah from '../../helpers/rupiah'
 
 export default function ItemProduct(props) {
     return (
@@ -20,10 +21,10 @@ export default function ItemProduct(props) {
                         starDimension="20px"
                     />
                     <p className="desc-product" >{props.desc}.</p>
-                    <div className="price-product" >{props.price}</div>
+                    <div className="price-product" >{ numToRupiah(props.price)}</div>
                 </div>
                 <div className="btn-product">
-                    <Link to={"/detail"} className="btn-detail" >DETAIL ITEM</Link>
+                    <Link to={`/detail/${props.id}`} className="btn-detail" >DETAIL ITEM</Link>
                 </div>
 
             </div>
