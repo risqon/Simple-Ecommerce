@@ -63,11 +63,12 @@ function* loadAdds() {
 
     }
 }
-function* loadAddsDetail(payload) {
+function* loadDetailAdds(payload) {
     const { id } = payload
     const QUERY_PATH = `${PATH}/${id}`
     try {
         const data = yield call(readDetailAdds, QUERY_PATH)
+        console.log('saga',data)
         yield put(actions.loadDetailAddsSuccess(data));
     } catch (error) {
         console.log(error);
@@ -151,7 +152,7 @@ export default function* rootSaga() {
 
         takeEvery('LOAD_ADDS', loadAdds),
         takeEvery('ADD_NEW_ADDS', postAdds),
-        takeEvery('LOAD_DETAIL_ADDS', loadAddsDetail),
+        takeEvery('LOAD_DETAIL_ADDS', loadDetailAdds),
         takeEvery('UPDATE_VOTE', updateAddsDetail)
     ]);
 }

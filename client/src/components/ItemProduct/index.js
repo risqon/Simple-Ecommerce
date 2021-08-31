@@ -9,7 +9,7 @@ export default function ItemProduct(props) {
         <div className="container-item">
             <div className="product-card">
                 <div className="head-card">
-                    <img src={props.image} style={{borderRadius: 10}} alt={props.title} />
+                    <img src={props.image} style={{borderRadius: 10, }} alt={props.title} />
                 </div>
                 <div className="body-card">
                     <div className="title-product" >{props.title}</div>

@@ -12,10 +12,10 @@ class DetailAdds extends Component {
         }
     }
 
-    componentDidMount(){
+    componentDidMount() {
         const detailId = Number(this.props.match.params.id)
-        console.log('detail',detailId)
-        this.props.loadDetailAdds(detailId)
+        console.log('detail', detailId)
+        this.props.loadDetail(detailId)
     }
 
 
@@ -30,21 +30,20 @@ class DetailAdds extends Component {
 
     render() {
 
-        const { isDetailTabActive, title, brand, price, image } = this.state
-
+        const { isDetailTabActive, title, brand, price, image } = this.props.data
+        console.log(title, brand, price, image)
         return (
             <div>
                 <Navbar />
                 <div className="detail-container">
-                    <div className="card-detail">
+                    <div className="card mb-3" style={{ width:900 , height: 600 }}>
                         <div className="row no-gutters">
-                            <div className="col-md-5 img-card">
-                                <img src={image} className="img-item" alt={title} />
+                            <div className="col-md-4">
+                                <img style={{width: 300, height: 400}} src={image} alt={title} />
                             </div>
-
-                            <div className="col-md-6 offset-md-1">
+                            <div className="col-md-8">
                                 <div className="card-body">
-                                    <h1 className="card-title"> Title 
+                                <h1 className="card-title"> Title 
                                     {title}</h1>
                                     <h4>{brand}</h4>
                                     <p className="card-text"><small className="text-muted">PRICE</small></p>
@@ -83,10 +82,11 @@ class DetailAdds extends Component {
 
 const mapStateToProps = (state) => ({
     data: state.detailAdds
+
 })
 
 const mapDispatchToProps = (dispatch) => ({
-    loadDetailAdds: (id) => dispatch(loadDetailAdds(id))
+    loadDetail: (id) => dispatch(loadDetailAdds(id))
 })
 
 export default connect(

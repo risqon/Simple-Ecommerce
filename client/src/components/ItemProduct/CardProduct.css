@@ -10,7 +10,7 @@
 
 .product-card{
     width: 400px;
-	height: auto;
+	height: 550px;
 	grid-column: span 8;
 	border-radius: 15px;
 	position: relative;
@@ -19,7 +19,7 @@
 
 .head-card img{
     width:400px;
-    height: auto;
+    height: 280px;
     object-fit: cover;
     display: flex;
     align-items: center;

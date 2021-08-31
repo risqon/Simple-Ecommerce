@@ -10,16 +10,6 @@ const detailAdds = (state = {}, action) => {
             }
         case 'RESET_DETAIL_ADDS':
             return {}
-        case 'UPVOTE_ADDS':
-            return {
-                ...state,
-                vote: state.vote + 1
-            }
-        case 'DEVOTE_ADDS':
-            return {
-                ...state,
-                vote: state.vote - 1
-            }
         default:
             return state
     }
